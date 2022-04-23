@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'PokemonHollow';
+    src: url("fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
+}
+
+p{
+    display: flex;
+    font-size: 50px;
+    height: 80px;
+    width: 600px;
+    margin: 0;
+    padding-left: 150px;
+   
+}
+
+
+p{
+    font-family: 'PokemonHollow', Arial, sans-serif;
+    font-weight: normal;
+    color: white;
+
+}
+
+#countdown{
+    padding-left: 220px;
+    color: black;
+}
+
+.contador{
+    display: flex;
+    flex-direction: column;
+    
+}
