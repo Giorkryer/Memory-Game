@@ -27,7 +27,8 @@ function flipCard(){
 /* Funçao para ver se as cartas correspondem */
 function correspondencia(){
     let match = firstCard.dataset.framework === secondCard.dataset.framework
-
+/* 
+Expressao regular */
     match ? desabilitarCards() : cardNaoVirados();
     
 /* comparando as cartas
