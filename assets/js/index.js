@@ -4,6 +4,7 @@ let hasFlippedCard = false;
 let lockBoard = false //funcao que corrige o bug
 let firstCard, secondCard
 
+/* Funçao para virar a carta */
 function flipCard(){
     if(lockBoard) return;
     if(this === firstCard) return;
@@ -23,7 +24,7 @@ function flipCard(){
         correspondencia();
     }
 
-
+/* Funçao para ver se as cartas correspondem */
 function correspondencia(){
     let match = firstCard.dataset.framework === secondCard.dataset.framework
 
@@ -40,6 +41,7 @@ if() {
             } */
 }
 
+/* Funçao que desabilita as cartas depois de viradas */
 function desabilitarCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -48,6 +50,7 @@ function desabilitarCards() {
     }
 
 
+    /* Funçao que desvira a carta depois de clicar e dar errado */
 function cardNaoVirados() {
     lockBoard = true;
 
@@ -66,6 +69,8 @@ function resetBoard(){
     [firstCard, secondCard] = [null, null]
 }
 
+
+/*     Funçao que embaralha as cartas */
 (function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
